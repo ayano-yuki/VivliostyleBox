@@ -1,0 +1,25 @@
+@import url(theme_common.css);
+
+@page {
+  size: A5;
+  margin: 15mm 15mm 15mm 15mm; /* 上右下左 */
+}
+
+body {
+  font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
+  font-size: 10pt;            
+  line-height: 1.6;        
+  margin: 0 auto;         
+  max-width: none;
+  padding: 0;
+  orphans: 3;
+  widows: 3;
+}
+
+@media screen {
+  body {
+    margin: 3em auto;
+    max-width: 600px;
+    padding: 0 20px;
+  }
+}

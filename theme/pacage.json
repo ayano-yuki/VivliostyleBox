@@ -1,0 +1,19 @@
+{
+  "name": "theme",
+  "author": "ayano yuki",
+  "private": true,
+  "keywords": [
+    "vivliostyle",
+    "vivliostyle-theme"
+  ],
+  "license": "MIT",
+  "vivliostyle": {
+    "theme": {
+      "name": "TechbookFest19",
+      "author": "ayano yuki",
+      "style": "./theme.css",
+      "category": "misc",
+      "topics": []
+    }
+  }
+}
