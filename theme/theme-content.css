@@ -61,7 +61,7 @@ body:has(nav[role='doc-content']) div.title p.author {
     font-weight: normal;
 }
 
-img {
+body:has(nav[role='doc-content']) img {
     max-width: 100%;
     max-height: var(--content-height); 
     height: auto;   

@@ -18,4 +18,3 @@
 body:has(nav[role='doc-frontmatter']){
     page: frontmatter;
 }
-
