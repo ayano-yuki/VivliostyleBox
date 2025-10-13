@@ -5,7 +5,9 @@ module.exports = {
   language: 'ja',
   theme: 'theme/theme.css',
   toc: true,
-  tocTitle: '目次',
+  toc: {
+    title: '目次',
+  },
   entry: [
     'content/01-frontmatter.md',
     'content/example.md',
