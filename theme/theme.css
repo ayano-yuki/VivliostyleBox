@@ -1,19 +1,18 @@
-@import url(theme_common.css);
+@import url("./root.css");
+@import url("./theme-content.css");
+@import url("./theme-cover.css");
+@import url("./theme-toc.css");
+@import url("./theme-frontmatter.css");
+@import url("./theme-colophon.css");
 
 @page {
   size: A5;
-  margin: 15mm 15mm 15mm 15mm; /* 上右下左 */
-}
+  margin: 15mm 12mm 15mm 12mm; /* 上右下左 */
 
-body {
-  font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
-  font-size: 10pt;            
-  line-height: 1.6;        
-  margin: 0 auto;         
-  max-width: none;
-  padding: 0;
-  orphans: 3;
-  widows: 3;
+  @bottom-center {
+    content: counter(page); /* counter(page) "  /  " counter(pages) " ページ"; */
+    font-size: 10pt;
+  }
 }
 
 @media screen {
@@ -22,4 +21,27 @@ body {
     max-width: 600px;
     padding: 0 20px;
   }
+}
+
+body {
+  font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
+  font-size: var(--font-size-base);            
+  line-height: 1.6;        
+  margin: 0 auto;         
+  max-width: none;
+  padding: 0;
+  orphans: 3;
+  widows: 3;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+p {
+  font-size: var(--font-size-base);
 }

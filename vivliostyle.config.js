@@ -1,14 +1,16 @@
 module.exports = {
   title: 'mybook',
-  author: 'イエナリ',
+  author: 'ayano-yuki',
   size: 'A5',
   language: 'ja',
-  theme: './theme/theme.css',
+  theme: 'theme/theme.css',
   toc: true,
-  tocTitle: '目次', 
-  
+  tocTitle: '目次',
   entry: [
-    'example.md',
+    'content/01-frontmatter.md',
+    'content/example.md',
+    `content/99-colophon.md`,
   ],
-  entryContext: './content',
+  entryContext: '.',
+  baseUrl: '.',
 };

@@ -1,0 +1,61 @@
+@import url("./root.css");
+
+/* 表紙がある場合に目次ページを制御 */
+body:has(nav[role='doc-toc']) {
+  page: toc; 
+  break-before: page;
+  line-height: 1.6;
+  font-size: var(--font-size-base);
+}
+
+/* 表紙があるとき、本文最初の h1 を非表示 */
+body:has(nav[role='doc-toc']) > h1 {
+  display: none;
+}
+
+/* 目次タイトル */
+body:has(nav[role='doc-toc'])  h2 {
+  font-size: var(--font-size-h1);
+  text-align: center;
+}
+
+/* 目次リスト */
+body:has(nav[role='doc-toc']) ol,
+body:has(nav[role='doc-toc']) ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* 各章リンク */
+body:has(nav[role='doc-toc']) li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3em 0;
+  
+}
+
+/* 章タイトルリンク */
+body:has(nav[role='doc-toc']) a {
+  color: inherit;
+  text-decoration: none;
+  flex: 1;
+  margin-bottom: 1em;
+}
+
+/* ページ番号（Vivliostyleの target-counter 使用） */
+body:has(nav[role='doc-toc']) a::after {
+  content: leader('.') " " target-counter(attr(href), page);
+  margin-left: 0.5em;
+}
+
+/* サブ項目のインデント */
+body:has(nav[role='doc-toc']) ol ol,
+body:has(nav[role='doc-toc']) ul ul {
+  margin-left: 1.5em;
+  font-size: 0.95em;
+}
+
+/* ページ番号右端揃え */
+body:has(nav[role='doc-toc']) li {
+  text-align: left;
+}

@@ -1,0 +1,32 @@
+:root {
+    --font-size-base: 12px;
+    --font-size-h1: 24px;
+    --font-size-h2: 18px;
+    --font-size-small: 10px;
+    --font-size-header-info: 0.85em;
+}
+
+/* base */
+:root {
+    --color-title-design: black;
+    --color-heading2-border: #ffcc00;
+    --color-heading1: black;
+    --color-heading2: black;
+    --color-heading3: black;
+    --color-secondary: #666;
+    --color-table-border: #eee;
+    --color-table-header: #f4f4f4; 
+    --color-table-even-row: #fcfcfc;
+    --color-light-text: #777;    
+    --color-code: #c0392b;       
+    --color-code-bg: #eef2f5;   
+    --color-blockquote: #555;  
+    --color-blockquote-bg: #f8f8f8;
+    --color-blockquote-border: #b2b2b2;
+    --color-link: #007bff; 
+}
+
+:root {
+    --content-height: 150mm;
+    --spacing-section: 2em;
+}

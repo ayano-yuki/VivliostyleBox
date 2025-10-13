@@ -1,115 +1,16 @@
-# 📖 技術書典19 (Techbookfest19)
-## 本のタイトル：イエナリ
+# VivliostyleBox
 
-技術書典19に向けて、**vivliostyle**とCSSを活用し、Markdownファイルから技術書を生成するためのプロジェクトリポジトリです。
+## コマンド
+- PDF生成
+  - npm run build
+- プレビュー
+  - npm run preview
 
------
-
-## 🛠️ コマンド
-
-本制作に使用する主なコマンドは以下の通りです。
-
-| コマンド | 概要 |
-| :--- | :--- |
-| `npm run build` | **PDFファイル**を生成します。 |
-| `npm run preview` | ブラウザで**リアルタイムプレビュー**を表示します。 |
-
------
-
-### ⚠️ コマンドを使う際の注意点
-
-このプロジェクトのルートディレクトリ（**`package.json`がある場所**）を起点としてコマンドを実行する必要があります。
-
-1.  **必要な依存関係のインストール**:
-    プロジェクトを開始する前に、必ず一度、依存パッケージをインストールしてください。
-
-    ```bash
-    npm install
-    ```
-
-2.  **コマンドの実行場所**:
-    `npm run build` や `npm run preview` のコマンドは、必ずリポジトリをクローンしたディレクトリの\*\*ルート（`vivliostyle.config.js`がある場所）\*\*で実行してください。
-
-    ```bash
-    # プロジェクトのルートディレクトリにいることを確認
-    npm run build
-    ```
-
-3.  **PDFの出力先**:
-    `npm run build` で生成されたPDFファイルは、通常、プロジェクトルートに作成される\*\*`output.pdf`\*\*というファイル名になります。このファイルを最終チェック用として利用してください。
-
-4.  **プレビューの終了**:
-    `npm run preview` を実行すると、ブラウザが開き、変更を監視し続けます。プレビューを終了する際は、ターミナルで `Ctrl + C` を押してサーバーを停止してください。
-
------
-
-## 🌳 開発ブランチルール
-
-GitHubでの共同開発を円滑に進めるため、以下のブランチ運用ルールを遵守してください。
-
-| ブランチ | 用途 |
-| :--- | :--- |
-| `main` | 最終成果物（本番）ブランチ。直接プッシュは禁止。 |
-| `feature/~~~` | **執筆作業**の際は、必ずこの形式で新規ブランチを作成してください。 |
-| `style/~~~` | **vivliostyleのCSSの追加・編集**の際は、必ずこの形式で新規ブランチを作成してください。 |
-
-### 共同作業の流れ
-
-1.  `main`ブランチから、作業ブランチを作成します。
-2.  作業が完了したら、`main`ブランチに対して **Pull Request (PR)** を出し、レビュー後にマージします。（レビューは適当でOK）
-
-### スタイル（CSS）編集ルール
-
-**vivliostyleのCSS（`theme/`ディレクトリ内のファイル）** を追加・編集した際は、レイアウト全体に影響が出る可能性があります。
-
-**必ず Discord で編集内容をチームメンバーに一報**し、影響範囲を共有してください。
-
------
-
-## 📝 使い方・執筆ガイドライン
-
-### 1\. 記事の追加とファイル名
-
-新しく執筆するMarkdownファイルを追加する際は、以下のルールに従い、\*\*`vivliostyle.config.js`\*\*内の`entry`配列に情報を追記してください。
-
-  - ファイル名は、**ケバブケース（小文字、単語間をハイフンで繋ぐ）** の**英語名**を推奨します。
-
-<!-- end list -->
-
-```javascript
-// vivliostyle.config.js の一部
-module.exports = {
-  // ...
-  entry: [
-    {
-      path: 'toc.md',
-      theme: `theme/theme-index/`,
-    },
-    // 【toc.mdの下に追記】
-    {
-      path: 'your-new-article-title.md', // 例: introduction-to-vivliostyle.md
-      theme: `theme/theme-contents/` // 本文
-    },
-    // ...
-  ],
-  entryContext: './manuscripts', // Markdownファイルはmanuscriptsディレクトリ内に配置
-};
-```
-
-### 2\. 記事の執筆場所
-
-Markdownファイルは、すべて\*\*`manuscripts`\*\*ディレクトリ内に配置して執筆してください。
-
-### 3\. 図形の挿入
-
-本文中に図形（画像）を挿入する場合は、以下のルールに従ってください。
-
-  - 画像ファイルは\*\*`images/`\*\*ディレクトリ内に配置し、**対応するMarkdownファイル名と同じ名前のフォルダ**を切ってください。
-      - 例: `manuscripts/chapter-1.md` に挿入する画像は `images/chapter-1/image.png` に配置します。
-  - 具体的な使い方の例は、`manuscripts/example.md`を参照してください。
-
-### 4\. PDFの確認
-
-  - 執筆中にレイアウトを確認したい場合は、`npm run preview`でブラウザプレビューを活用してください。
-
------
+## 参考
+- [ゼロからVivliostyleでレポートを書くまで ②カスタマイズ編](https://zenn.dev/kaiware0x/articles/ad747d1c8b49b8)
+- [Vivliostyle できれいな目次を自動生成する](https://smooth-pudding.hatenablog.com/entry/2025/06/16/213500)
+- [Vivliostyleの公式テーマをカスタマイズして、ゆめみ大技林 '22のテーマを作った](https://zenn.dev/macneko/articles/06aec138a357b9)
+- [Vivliostyle Theme のつくりかた](https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol5/content/yamasy/index.html)
+- [Vivliostyle.js における CSS Paged Media の実装](https://vivliostyle.github.io/vivliostyle_doc/ja/events/vivliostyle-css-paged-media-20210410/slide.html)
+- [チュートリアル | Vivliostyle](https://vivliostyle.org/ja/tutorials/)
+- [サンプル | Vivliostyle](https://vivliostyle.org/ja/samples/)

@@ -1,3 +1,186 @@
-* {
-    color: red;
+@import url('../theme/root.css');
+
+@page content:right {
+    @top-right {
+        margin-top: 10px;
+        content: env(doc-title);
+        font-size: var(--font-size-small);
+    }
+}
+@page content:left {
+    @top-left {
+        margin-top: 10px;
+        content: env(pub-title);
+        font-size: var(--font-size-small);
+    }
+}
+
+body:has(nav[role='doc-content']){
+    page: content;
+}
+
+body:has(nav[role='doc-content']) h1 {
+    display: none;
+}
+
+/* body:has(nav[role='doc-content']) h2 {
+    margin: var(--spacing-section) 0 1em;
+    color: var(--color-heading2);
+    border-left: 6px solid var(--color-heading2-border);
+    padding: 0.4em 0.8em;
+} */
+
+body:has(nav[role='doc-content']) div.title {
+    border-left: 4pt solid var(--color-title-design);
+    border-bottom: 2pt solid var(--color-title-design);
+    padding-top: 5pt;
+    padding-left: 14pt;
+    padding-bottom: 10pt;
+    margin-bottom: 20pt;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-size-h1);
+    font-weight: bold;
+}
+  
+body:has(nav[role='doc-content']) div.title::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 2pt);
+    border-left: 2pt solid var(--color-title-design);
+    top: 0;
+    left: 2pt;
+}
+
+body:has(nav[role='doc-content']) div.title p.author {
+    align-self: flex-end;
+    margin: 4pt 0 0 0;
+    text-align: right;
+    font-weight: normal;
+}
+
+img {
+    max-width: 100%;
+    max-height: var(--content-height); 
+    height: auto;   
+    width: auto;     
+    display: block; 
+    margin: 0 auto; 
+    object-fit: contain;
+}
+  
+p.caption, figcaption {
+    font-size: var(--font-size-small);
+    color: var(--color-secondary);
+    text-align: center;
+    margin: 0.5em 0 2em;
+    font-style: italic;
+}
+
+/* table {
+    border-collapse: collapse;
+    margin: var(--spacing-section) auto;
+    width: 100%;
+    font-size: var(--font-size-small);
+    border: 1px solid var(--color-table-border);
+    overflow: hidden;
+}
+  
+table th, table td {
+    border: 1px solid var(--color-table-border);
+    padding: 0.7em 1em;
+}
+  
+table th {
+    background: var(--color-table-header);
+    font-weight: bold;
+    color: var(--color-heading1);
+}
+  
+table tr:nth-child(even) {
+    background-color: var(--color-table-even-row);
+} */
+
+table {
+    border-collapse: separate;           
+    border-spacing: 0;                    
+    margin: var(--spacing-section) auto;
+    width: 100%;
+    font-size: var(--font-size-small);
+    border: 1px solid var(--color-table-border);
+    border-radius: 8px;                  
+    overflow: hidden;                  
+}
+table th, table td {
+    border: 1px solid var(--color-table-border);
+    padding: 0.7em 1em;
+}
+table th {
+    background: var(--color-table-header);
+    font-weight: bold;
+    color: var(--color-heading1);
+}  
+table tr:nth-child(even) {
+    background-color: var(--color-table-even-row);
+}  
+table tr:first-child th:first-child {
+    border-top-left-radius: 8px;
+}
+table tr:first-child th:last-child {
+    border-top-right-radius: 8px;
+}
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 8px;
+}
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 8px;
+}
+
+blockquote {
+    border-left: 4px solid var(--color-blockquote-border);
+    background: var(--color-blockquote-bg);
+    padding: 1.5em 2em;
+    margin: var(--spacing-section) 0;
+    font-size: 0.98em;
+    line-height: 1.7;
+    color: var(--color-blockquote);
+}
+  
+blockquote cite {
+    display: block;
+    text-align: right;
+    font-size: var(--font-size-header-info);
+    margin-top: 0.8em;
+    color: var(--color-light-text);
+}
+  
+blockquote cite::before {
+    content: "— ";
+}
+  
+code {
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    background: var(--color-code-bg);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    font-size: var(--font-size-small);
+    color: var(--color-code);
+}
+  
+pre code {
+    display: block;
+    background: #f0f0f0;
+    color: black;
+    padding: 1.5em;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: var(--font-size-small);
+    line-height: 1.6;
+}
+
+a:link, a:visited {
+    color: var(--color-link); 
+    text-decoration: underline;
 }

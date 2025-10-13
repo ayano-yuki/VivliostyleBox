@@ -1,0 +1,19 @@
+@import url('../theme/root.css');
+
+@page cover {
+    @bottom-center {
+        content: "@2025";
+        text-align: center;
+        font-size: var(--font-size-base);
+    }
+}
+
+body:has(nav[role='doc-cover']) h1 {
+    text-align: center;
+    font-size: var(--font-size-h1);
+}
+
+body:has(nav[role='doc-cover']){
+    page: cover;
+}
+

@@ -1,7 +1,11 @@
+<nav id="content" role="doc-content">
+
+<div class="title">
+  モダンなWeb開発の基礎
+  <p class="author">著者（SNS）</p>
+</div>
+
 # モダンなWeb開発の基礎
-<p class="author">
-  著者（SNS）
-</p>
 
 ## 第1章 はじめに
 
@@ -64,3 +68,4 @@ const card = document.querySelector('.card');
 **margin** | 要素の外側の余白 | px, %, emなど
 **padding** | 要素の内側の余白 | px, %, emなど
 **border** | 要素の境界線 | px, solid, dashedなど
+

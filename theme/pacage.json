@@ -9,7 +9,7 @@
   "license": "MIT",
   "vivliostyle": {
     "theme": {
-      "name": "TechbookFest19",
+      "name": "mybook",
       "author": "ayano yuki",
       "style": "./theme.css",
       "category": "misc",

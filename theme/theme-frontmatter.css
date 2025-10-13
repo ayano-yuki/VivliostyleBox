@@ -1,0 +1,21 @@
+@import url('../theme/root.css');
+
+@page frontmatter:right {
+    @top-right {
+        margin-top: 10px;
+        content: env(doc-title);
+        font-size: var(--font-size-small);
+    }
+}
+@page frontmatter:left {
+    @top-left {
+        margin-top: 10px;
+        content: env(pub-title);
+        font-size: var(--font-size-small);
+    }
+}
+
+body:has(nav[role='doc-frontmatter']){
+    page: frontmatter;
+}
+

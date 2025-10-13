@@ -1,0 +1,35 @@
+@import url("./root.css");
+
+@page colophon:right {
+    @top-right {
+        margin-top: 10px;
+        content: env(doc-title);
+        font-size: var(--font-size-small);
+    }
+}
+@page colophon:left {
+    @top-left {
+        margin-top: 10px;
+        content: env(pub-title);
+        font-size: var(--font-size-small);
+    }
+}
+
+body:has(nav[role='doc-colophon']) {
+    page: colophon;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  
+}
+
+body:has(nav[role='doc-colophon']) .okuduke {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    padding-top: 1.5em;
+    font-size: 0.9rem;
+}
+
+body:has(nav[role='doc-colophon']) .okuduke p {
+    margin: 0.2em 0;    
+}

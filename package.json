@@ -1,6 +1,6 @@
 {
-  "name": "techbookfest-19",
-  "description": "techbookfest19",
+  "name": "mybook",
+  "description": "mybook",
   "version": "0.0.0",
   "scripts": {
     "build": "vivliostyle build",
