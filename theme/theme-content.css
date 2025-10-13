@@ -21,6 +21,7 @@ body:has(nav[role='doc-content']){
 
 body:has(nav[role='doc-content']) h1 {
     display: none;
+    string-set: title content();
 }
 
 body:has(nav[role='doc-content']) h2 {
@@ -43,15 +44,27 @@ body:has(nav[role='doc-content']) div.title {
     font-size: var(--font-size-h1);
     font-weight: bold;
 }
-  
+
 body:has(nav[role='doc-content']) div.title::before {
+    content: string(title);
+    display: block;
+    font-weight: bold;
+    font-size: var(--font-size-h1);
+    padding-left: 10pt;
+    margin-left: -10pt;
+    position: relative;
+    z-index: 1; 
+}
+
+body:has(nav[role='doc-content']) div.title::after {
     content: "";
     position: absolute;
-    width: 100%;
-    height: calc(100% + 2pt);
-    border-left: 2pt solid var(--color-title-design);
     top: 0;
     left: 2pt;
+    width: 2pt;
+    height: 100%;
+    background-color: var(--color-title-design);
+    z-index: 0;
 }
 
 body:has(nav[role='doc-content']) div.title p.author {
@@ -60,6 +73,7 @@ body:has(nav[role='doc-content']) div.title p.author {
     text-align: right;
     font-weight: normal;
 }
+
 
 body:has(nav[role='doc-content']) img {
     max-width: 100%;
@@ -111,7 +125,8 @@ table {
     font-size: var(--font-size-small);
     border: 1px solid var(--color-table-border);
     border-radius: 8px;                  
-    overflow: hidden;                  
+    overflow: hidden;
+    break-inside: avoid;             
 }
 table th, table td {
     border: 1px solid var(--color-table-border);
@@ -146,6 +161,7 @@ blockquote {
     font-size: 0.98em;
     line-height: 1.7;
     color: var(--color-blockquote);
+    break-inside: avoid;
 }
   
 blockquote cite {

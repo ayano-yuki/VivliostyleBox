@@ -7,11 +7,19 @@
 
 @page {
   size: A5;
-  margin: 15mm 12mm 15mm 12mm; /* 上右下左 */
+  margin: 15mm 15mm 15mm 15mm; /* 上右下左 */
+}
 
-  @bottom-center {
+@page :left {
+  @bottom-left {
     content: counter(page); /* counter(page) "  /  " counter(pages) " ページ"; */
-    font-size: 10pt;
+    font-size: var(--font-size-small);
+  }
+}
+@page :right {
+  @bottom-right {
+    content: counter(page); /* counter(page) "  /  " counter(pages) " ページ"; */
+    font-size: var(--font-size-small);
   }
 }
 
