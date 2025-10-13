@@ -1,11 +1,10 @@
 <nav id="content" role="doc-content">
 
+# モダンなWeb開発の基礎
+
 <div class="title">
-  モダンなWeb開発の基礎
   <p class="author">著者（SNS）</p>
 </div>
-
-# モダンなWeb開発の基礎
 
 これは文章です<span class="footnote">脚1注の内容です。</span>
 

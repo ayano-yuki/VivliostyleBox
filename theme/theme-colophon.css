@@ -57,7 +57,7 @@ body:has(nav[role='doc-colophon']) .info {
     display: inline-block;
     vertical-align: middle;
     margin-left: 0.8em;
-    max-width: 355px;
+    max-width: 325px;
 }
   
   body:has(nav[role='doc-colophon']) .name {
