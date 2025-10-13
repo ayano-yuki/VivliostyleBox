@@ -6,10 +6,9 @@
     --font-size-header-info: 0.85em;
 }
 
-/* base */
 :root {
     --color-title-design: black;
-    --color-heading2-border: #ffcc00;
+    --color-heading2-border: black;
     --color-heading1: black;
     --color-heading2: black;
     --color-heading3: black;

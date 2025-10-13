@@ -23,12 +23,12 @@ body:has(nav[role='doc-content']) h1 {
     display: none;
 }
 
-/* body:has(nav[role='doc-content']) h2 {
+body:has(nav[role='doc-content']) h2 {
     margin: var(--spacing-section) 0 1em;
     color: var(--color-heading2);
     border-left: 6px solid var(--color-heading2-border);
     padding: 0.4em 0.8em;
-} */
+}
 
 body:has(nav[role='doc-content']) div.title {
     border-left: 4pt solid var(--color-title-design);
@@ -183,4 +183,31 @@ pre code {
 a:link, a:visited {
     color: var(--color-link); 
     text-decoration: underline;
+}
+
+body {
+    counter-reset: footnote;
+}
+  
+.footnote {
+    counter-increment: footnote;
+    font-size: 0.8em;
+}
+  
+.footnote::footnote-call {
+    content: "[" counter(footnote) "]"; 
+    font-size: 0.8em;
+    margin-inline-start: 0.2em;
+    margin-inline-end: 0.2em;
+}
+  
+.footnote::footnote-marker {
+    content: "[" counter(footnote) "] "; 
+    font-size: 0.8em;
+}
+  
+@media print {
+    .footnote {
+      float: footnote; 
+    }
 }
