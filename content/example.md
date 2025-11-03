@@ -72,3 +72,5 @@ const card = document.querySelector('.card');
 **padding** | 要素の内側の余白 | px, %, emなど
 **border** | 要素の境界線 | px, solid, dashedなど
 
+<hr class="page-wrap" />
+<br>
