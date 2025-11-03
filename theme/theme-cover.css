@@ -16,4 +16,3 @@ body:has(nav[role='doc-cover']) h1 {
 body:has(nav[role='doc-cover']){
     page: cover;
 }
-

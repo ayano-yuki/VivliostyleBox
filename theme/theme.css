@@ -53,3 +53,8 @@ h2 {
 p {
   font-size: var(--font-size-base);
 }
+
+hr.page-wrap {
+  break-after: page;
+  visibility: hidden;
+}
