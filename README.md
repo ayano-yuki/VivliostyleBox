@@ -14,3 +14,4 @@
 - [Vivliostyle.js における CSS Paged Media の実装](https://vivliostyle.github.io/vivliostyle_doc/ja/events/vivliostyle-css-paged-media-20210410/slide.html)
 - [チュートリアル | Vivliostyle](https://vivliostyle.org/ja/tutorials/)
 - [サンプル | Vivliostyle](https://vivliostyle.org/ja/samples/)
+- [DTPあるあるのCSS組版的解決法](https://gihyo.jp/article/2025/07/vivliostyle-06)
