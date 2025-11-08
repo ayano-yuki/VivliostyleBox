@@ -6,7 +6,6 @@
 @import url("./theme-colophon.css");
 
 @page {
-  size: A5;
   margin: 15mm 15mm 15mm 15mm; /* 上右下左 */
 }
 
