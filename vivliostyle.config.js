@@ -1,7 +1,7 @@
 module.exports = {
   title: 'mybook',
   author: 'ayano-yuki',
-  size: 'B5',
+  size: 'shift',
   language: 'ja',
   theme: 'theme/theme.css',
   toc: true,

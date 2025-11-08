@@ -1,13 +1,14 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css';
 @import url('../theme/root.css');
 
-@page content:right {
+@page content:left {
     @top-right {
         margin-top: 10px;
         content: env(doc-title);
         font-size: var(--font-size-small);
     }
 }
-@page content:left {
+@page content:right {
     @top-left {
         margin-top: 10px;
         content: env(pub-title);
@@ -191,7 +192,6 @@ pre code {
     color: black;
     padding: 1.5em;
     border-radius: 6px;
-    overflow-x: auto;
     font-size: var(--font-size-small);
     line-height: 1.6;
 }
